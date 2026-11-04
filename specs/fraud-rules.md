@@ -199,8 +199,11 @@ points = min(HIGH_RISK_MAX (80),
 only has 2 steps (seed + one followup), which already shows the fix
 working — score moves from a flat 20 to 45 (LOW → **MEDIUM**) on the
 second occurrence, instead of staying at 20 forever like `vibes`.
-Extending the same pattern to more repeats (same gambling merchant, same
-24h window) shows where the escalation leads:
+Extending the same pattern to more repeats — clustered within the same
+rolling 24h window as each other (e.g. several occurrences within one
+day; spacing them exactly 24h apart would let the window evict all but
+the immediately-preceding one, capping `prior_count` at 1) — shows where
+the escalation leads:
 
 | occurrence | amount | prior_count | points | cumulative risk_score | bucket |
 |---|---|---|---|---|---|
