@@ -49,6 +49,7 @@ curl -X POST http://127.0.0.1:8000/transactions/check \
   -d '{
     "transaction_id": "tx-100",
     "account_id": "acct-42",
+    "card_id": "card-42",
     "amount": 25000,
     "merchant": "Random Casino",
     "merchant_category": "gambling",

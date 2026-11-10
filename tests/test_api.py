@@ -20,6 +20,7 @@ def make_tx(**overrides) -> dict:
     tx = {
         "transaction_id": "tx-1",
         "account_id": "acct-1",
+        "card_id": "card-1",
         "amount": 50.0,
         "currency": "USD",
         "merchant": "Corner Cafe",

@@ -55,6 +55,7 @@ def make_tx(
     *,
     account_id: str,
     amount: float,
+    card_id: str | None = None,
     merchant: str = "Everyday Groceries",
     merchant_category: str | None = "groceries",
     country: str = "US",
@@ -64,6 +65,7 @@ def make_tx(
     return Transaction(
         transaction_id=str(uuid.uuid4()),
         account_id=account_id,
+        card_id=card_id or f"card-{account_id}",
         amount=amount,
         merchant=merchant,
         merchant_category=merchant_category,

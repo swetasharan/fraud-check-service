@@ -16,6 +16,7 @@ class RiskLevel(str, Enum):
 class Transaction(BaseModel):
     transaction_id: str = Field(..., description="Unique ID for this transaction")
     account_id: str = Field(..., description="ID of the account making the transaction")
+    card_id: str = Field(..., description="ID of the card used for this transaction")
     amount: float = Field(..., gt=0, description="Transaction amount")
     currency: str = Field("USD", min_length=3, max_length=3)
     merchant: str = Field(..., description="Merchant name")
